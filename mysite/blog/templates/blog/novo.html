@@ -1,0 +1,26 @@
+{% extends "blog\index.html" %}
+{% block contenido %}
+        <form role="form" action="{% url 'blog.views.novo' %}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+            <div class="form-group">
+                <label>Codigo</label><input type="text" class="form-control" name="codigo" placeholder="Escreva o código do equipamento" {{form.Codigo}}>
+                 
+            </div>
+            <div class="form-group">
+                <label>Marca</label><input type="text" class="form-control" name="marca" placeholder="Escreva a marca do equipamento" {{form.Marca}}>
+            </div>
+            <div class="form-group">
+                <label>Modelo</label><input type="text" class="form-control" name="modelo" placeholder="Escreva o modelo do equipamento" {{form.Modelo}}>
+            </div>
+            <div class="form-group">
+                <label>Nome</label><input type="text" class="form-control" name="nome" placeholder="Escreva o nome do equipamento" {{form.Modelo}}>
+            </div>
+            <div class="form-group">
+                <label>Foto</label><input type="file" class="" name="foto" id="foto" size = '30000' {{form.Foto}}>
+            </div>            
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-floppy-o">&nbsp;</i>Salvar</button>
+                <button type="reset" class="btn btn-danger"><i class="fa fa-clipboard">&nbsp;</i>Limpar</button>
+            </div>
+        </form>
+{% endblock %}
